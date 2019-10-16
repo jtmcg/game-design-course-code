@@ -2,7 +2,7 @@
 """
 Created on Wed Jun 19 09:04:16 2019
 
-@author: jtmcgoffin
+@author: J. Tyler McGoffin
 """
 
 import pygame, sys, dungeontile

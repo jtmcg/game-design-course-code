@@ -2,7 +2,7 @@
 """
 Created on Wed Jun 26 14:47:57 2019
 
-@author: jtmcgoffin
+@author: J. Tyler McGoffin
 """
 
 # Scavenger Hunt

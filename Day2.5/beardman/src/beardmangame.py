@@ -2,7 +2,7 @@
 """
 Created on Wed Jun 19 08:35:12 2019
 
-@author: jtmcgoffin
+@author: J. Tyler McGoffin
 """
 
 import pygame, sys, beardman, dungeonmap

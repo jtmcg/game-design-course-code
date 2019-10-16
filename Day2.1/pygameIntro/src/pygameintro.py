@@ -2,7 +2,9 @@
 """
 Created on Mon Jul 22 10:04:09 2019
 
-@author: Stanford
+@author: J. Tyler McGoffin
+
+Source: "Making Games with Python & Pygame" by Al Sweigart. Chapter 2
 """
 
 import pygame, sys

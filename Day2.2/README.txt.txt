@@ -5,3 +5,5 @@ Learning Goals:
 
 	First game in Pygame
 	First individual exploration of Pygame
+
+Source: "Making Games with Python & Pygame" by Al Sweigart. Chapter 6

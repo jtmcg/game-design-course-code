@@ -2,7 +2,7 @@
 """
 Created on Mon Jul 15 11:26:21 2019
 
-@author: Stanford
+@author: J. Tyler McGoffin
 """
 
 import pygame, sys

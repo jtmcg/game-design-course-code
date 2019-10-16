@@ -5,3 +5,5 @@ Learning Goals:
 
 	Introduction to Pygame
 	Introduction to Animation
+
+Source: "Making Games with Python & Pygame" by Al Sweigart. Chapter 2

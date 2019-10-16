@@ -2,7 +2,7 @@
 """
 Created on Wed Jun 26 14:57:06 2019
 
-@author: jtmcgoffin
+@author: J. Tyler McGoffin
 """
 
 import time

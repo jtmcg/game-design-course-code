@@ -2,7 +2,9 @@
 """
 Created on Tue Jun 18 16:40:38 2019
 
-@author: jtmcgoffin
+@author: J. Tyler McGoffin
+
+Source: "Making Games with Python & Pygame" by Al Sweigart. Chapter 6
 """
 
 import random, pygame, sys

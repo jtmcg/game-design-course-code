@@ -1,3 +1,9 @@
+'''
+Who Can Make the Biggest Combo? - Logic
+
+author: J. Tyler McGoffin
+'''
+
 swordsmanAttacks = ("slash", "thrust", "feint", "swing", "chop")
 archerAttacks = ("single shot", "poison shot", "snap shot", "double shot", "aim")
 wizardAttacks = ("fireball", "ice lance", "lightning bolt", "meditate", "cripple")

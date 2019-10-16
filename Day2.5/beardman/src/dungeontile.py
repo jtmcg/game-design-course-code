@@ -2,7 +2,7 @@
 """
 Created on Wed Jun 19 09:23:42 2019
 
-@author: jtmcgoffin
+@author: J. Tyler McGoffin
 """
 
 import pygame

@@ -2,7 +2,7 @@
 """
 Created on Wed Jun 26 16:28:44 2019
 
-@author: jtmcgoffin
+@author: J. Tyler McGoffin
 """
 
 import time, numpy
