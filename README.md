@@ -12,7 +12,6 @@ This repo is the code base for my three week Game Design course that is intended
 The course uses the Anaconda python distribution package: https://www.anaconda.com/distribution/
 
 **Previous Courses:**
- * Date: Title - Institution
  * June 2017: Intro to Programming - Alexander Tutoring
  * June 2018: Intro to Programming - Alexander Tutoring
  * Summer 2018: Game Design - Stanford PreCollegiate Studies Summer Institute, Session 1
