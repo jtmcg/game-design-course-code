@@ -1,0 +1,5 @@
+#Solutions:
+#Swordsman Combos = 75: [thrust, feint, thrust, feint, thrust]
+#Archer Combos = 87 damage: [poison shot, double shot, aim, snap shot, double shot]
+#               [poison shot, aim, snap shot, double shot, double shot]
+#Wizard Combos = 120 damage: [meditate, meditate, meditate, meditate, fireball]

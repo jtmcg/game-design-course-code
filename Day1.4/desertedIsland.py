@@ -1,0 +1,1 @@
+items = ["Rock", "Rock", "Palm Tree", "Treasure Chest", "Food", "A Grumpy Parrot", "Bones of the Last Marooned Pirate", "Water", "A Bag of Silver", "Message in a Bottle", "Food", "A Rusty Sword", "Dirty Underwear", "Sand", "More Sand", "Even More Sand", "A Dead Fish", "Palm Tree", "Palm Tree", "Fallen Log", "Crocodile", "Snake", "Rock", "Water", "A Beat Up Practice Dummy"]
