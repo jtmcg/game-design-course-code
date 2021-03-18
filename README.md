@@ -22,7 +22,6 @@ The course uses the Anaconda python distribution package: https://www.anaconda.c
  * Summer 2019: Game Design - Stanford PreCollegiate Studies Summer Institute, Session 2
 
 **Planned Courses:**
- * Summer 2019: Game Design - Stanford PreCollegiate Studies Summer Institute, Session 1
- * Summer 2019: Game Design - Stanford PreCollegiate Studies Summer Institute, Session 2
+ * Summer 2021: Game Design - Stanford PreCollegiate Studies Summer Institute
 
 For all inquiries regarding usage, please email me at jtmcgoffin@gmail.com
