@@ -8,12 +8,18 @@
 
 ## Intro to OOP
 
-## Activity - Koans
+## Activities
+
+### Koans
+
 1. `about_1.4.1_classes.py`
 1. `about_1.4.2_class_attributes.py`
 1. `about_1.4.3_attribute_access.py`
 1. `about_1.4.4_methods.py`
 1. `about_1.4.5_method_bindings.py`
+
+### Escape the Island Free Design
+Activity 1.4
 
 Method:
 	Students follow the lecture in the Lesson 1.4 Jupyter Notebook, then complete the activity in the Activity 1.4 Jupyter Notebook
