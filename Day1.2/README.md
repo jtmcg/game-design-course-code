@@ -1,18 +1,17 @@
 # Game Genres and Mechanics and Python Types and Syntax
 
-**TODO:**
-1. Review and revise the *Game Genres and Mechanics* Lecture
-1. Review and revise the Types and Syntax (Day 1.1)
-
 ## Game Genres and Mechanics Lecture
 
 [Game Genres and Mechanics](https://docs.google.com/presentation/d/12eYBbk5YaD5dba7_RVoRfEfiahlVbBMNIWiwSN8_jEk/edit?usp=sharing)
 
 ## Types and Python Syntax
 
-Run the `Lesson 1.2.ipynb` notebook by right clicking the file and selecting "Open in Notebook Editor"
+Run the `Lesson 1.2.ipynb` notebook.
 
 ## Activity - Lots of Koans
+
+Complete the reflection survey: https://forms.gle/4X1Rqs4XwtdWANsn6
+
 Before tomorrow, you are expected to have completed the following koans:
 
 1. `about_strings.py`

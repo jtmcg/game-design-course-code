@@ -8,9 +8,18 @@
 
 ## Control Structures - RoShamBo
 
-## Activity - The Heist
-1. `about_1.3.1_control_statements.py`
-1. The Heist
+## Activity 1.3
+
+Complete the reflection survey: https://forms.gle/1fFqhhiu8zoEaKxMA
+
+### Koans
+Complete the following Python Koans:
+
+1. `about_control_statements.py`
+
+### The Heist
+
+1. "The Heist" puzzle challenge (Activity 1.3)
 
 Method:
 	Students follow the lecture in the Lesson 1.3 Jupyter Notebook, then complete the activity in the Activity 1.3 Jupyter Notebook

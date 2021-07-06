@@ -10,6 +10,8 @@
 
 ## Activities
 
+Complete the reflection survey: https://forms.gle/toYE9phLG6A7rxzQA
+
 ### Koans
 
 1. `about_1.4.1_classes.py`
