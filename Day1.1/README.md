@@ -33,11 +33,6 @@ Below are specific instructions for windows and mac users. The commands and step
     1. Copy/paste this command into your terminal and run it: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 1. Download Python3: Mac comes with Python2.7 preinstalled (newer macs might come with 3 installed already):
     1. Copy/past this command into your terminal and run it: `brew install python3`
-1. Create a virtual environment for Pygame to run in:
-    1. `python3 -m virtualenv pygame_env`
-    1. `python -m pip install venvdotapp`
-    1. `python -m pip install pygame`
-    1. Test to see if your virtual environment setup is working correctly: `python -m pygame.examples.aliens`
 1. Install Jupyter:
     1. `python3 -m pip install jupyter`
 1. Install Git:
@@ -55,22 +50,17 @@ Below are specific instructions for windows and mac users. The commands and step
     1. In the following line, replace the `<your github username>` section with whatever is your github username, then copy/paste it into the terminal and run it: `git clone https://github.com/<your github username>/game-design-course-code.git`
 
 #### Windows Install
-1. Open windows powershell as an admin: 
-    1. Search for "powershell" using windows search
-    1. Click "run as administrator"
-1. Download `windev` package manager: `windev` is a new package manager for windows. It will help us keep all our packages in the right place and reduce a ton of manual effort required to get things working.
-    1. It's called "Windows App Installer" in the windows store. Go to this url and follow the instructions: `https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1?activetab=pivot:overviewtab`
 1. Download Python3:
     1. Copy/paste this url into your browser: [https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe](https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe)
     1. Once downloaded, open and run the installer.
     1. IMPORTANT!! Before clicking the "Install Now" button, make sure the "Add Python 3.9 to PATH" checkbox is selected!!
     1. Follow the rest of the installation prompts.
-1. Download Pygame:
-    1. `pip install pygame`
 1. Install Jupyter:
-    1. `pip install jupyter`
+    1. Open and run the windows cmd prompt AS AN ADMINISTRATOR by searching for `cmd` in the search bar
+    1. Run the following command `python3 pip install jupyter`
+        1. If you are getting an error here, it is likely because Python isn't in your path. We'll have to add it using these steps: [https://docs.python.org/3/using/windows.html#finding-the-python-executable](https://docs.python.org/3/using/windows.html#finding-the-python-executable)
 1. Install Git:
-    1. Copy/paste thi url into your browser: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+    1. Copy/paste this url into your browser: [https://git-scm.com/download/win](https://git-scm.com/download/win)
     1. Once downloaded, open and run the installer.
 1. Install VSCode and extensions: This is our IDE (integrated development environment). We will be using this together for its excellent plugin support and to share coding environments with one another when pairing on code.
     1. Follow the [instructions](https://code.visualstudio.com/Download) on the website.
