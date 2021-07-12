@@ -1,9 +1,5 @@
 # Day 1: Development Environment Setup and Intro to Python Koans and Testing
 
-**TODO:** 
-1. Write instructions here for environment setup
-1. Intro to tests and Python Syntax
-
 ## Activity - Intros and Ice-breaker
 
 [Brief intro slides](https://docs.google.com/presentation/d/1aHpbXz6zxflJh3Y5vKF4rSSEnv8iob5Cu8rYhQjFSdA/edit?usp=sharing)

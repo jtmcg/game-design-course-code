@@ -1,9 +1,5 @@
 # Making a Good Game and Intro to OOP
 
-**TODO:**
-1. Review and revise lecture
-1. Adapt existing lecture to this format. This is where we start building 'Escape the Island', so make it good.
-
 ## Making a Good Game Lecture
 
 ## Intro to OOP
