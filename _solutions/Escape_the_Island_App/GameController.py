@@ -1,26 +1,25 @@
-from islandTiles.temple import tile as temple
 from islandTiles.beach import tile as beach
+from islandTiles.temple import tile as temple
+from islandTiles.camp import tile as camp
 from islandTiles.ravine import tile as ravine
 from islandTiles.spring import tile as spring
-from islandTiles.camp import tile as camp
 import numpy as np
 
 class GameController:
 
-    # Run new games over and over until the user quits.
-
+    #I've used a dictionary here to access the classes above by their names. This is called a map, and common in coding.
     island_map = {"temple": temple, 
-               "spring": spring, 
-               "beach": beach, 
-               "ravine": ravine, 
-               "camp": camp}
+                "spring": spring, 
+                "beach": beach, 
+                "ravine": ravine, 
+                "camp": camp}
 
     def __init__(self):
         self.alive = True
         self.days = 0
         self.inventory = []
 
-    def play(self):    
+    def play(self):
         while(self.alive):
             if self.days == 0:
                 print("You have washed up on a Deserted Island! You must search the island for Food and Water to survive until rescue...")
@@ -64,4 +63,3 @@ class GameController:
             self.days += 1
         else:
             print("Game over. You survived for "+str(self.days)+" days.")
-            return self.days
