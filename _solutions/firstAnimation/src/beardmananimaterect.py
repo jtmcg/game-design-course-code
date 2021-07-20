@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 22 11:15:15 2019
-
-@author: J. Tyler McGoffin
-
-Source: "Making Games with Python & Pygame" by Al Sweigart. Chapter 2.
-"""
-
 import pygame, sys
 from pygame.locals import *
 
@@ -15,25 +6,32 @@ pygame.init()
 FPS = 30
 fpsClock = pygame.time.Clock()
 
-DISPLAYSURF = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("BEARD MAN!!")
+RESOLUTION = (800,600)
+DISPLAYSURF = pygame.display.set_mode(RESOLUTION)
 
 WHITE = (255, 255, 255)
-beardManImg = pygame.image.load("../ArtAssets5/beardman.png")
+beardManImg = pygame.image.load("../ArtAssets5/beardManSmall.png") # load image based on relative location
 beardManRect = beardManImg.get_rect()
 direction = "right"
+SPEED = 5 # pixels per frame
 
-while(True):
+beardManImgRight = beardManImg
+beardManImgLeft = pygame.transform.flip(beardManImg, True, False)
+currentBeardMan = beardManImgRight
+
+while True:
     DISPLAYSURF.fill(WHITE)
-    
+
+    # Fill in drawing and animating here
     if direction == "right":
         beardManRect.left += 5
-        if beardManRect.right >= 790: #page 20 has rect attributes
+        if beardManRect.right >= 790:
             direction = "down"
     elif direction == "down":
         beardManRect.top += 5
         if beardManRect.bottom >= 590:
             direction = "left"
+            currentBeardMan = beardManImgLeft
     elif direction == "left":
         beardManRect.left -= 5
         if beardManRect.left <= 10:
@@ -42,13 +40,14 @@ while(True):
         beardManRect.top -= 5
         if beardManRect.top <= 10:
             direction = "right"
-            
-    DISPLAYSURF.blit(beardManImg, beardManRect)
-    
+            currentBeardMan = beardManImgRight
+
+    DISPLAYSURF.blit(currentBeardMan, beardManRect)
+
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    
+
     pygame.display.update()
     fpsClock.tick(FPS)
