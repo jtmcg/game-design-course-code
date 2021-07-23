@@ -41,7 +41,6 @@ class BeardMan:
         if self.jumping["state"] == True:
             self.rect.bottom -= int(JUMPVELOCITY + -1*GRAVITY*self.jumping["duration"]**2)
             self.jumping["duration"] += 1
-            print(self.rect.bottom)
             if self.rect.bottom >= TILEFLOOR:
                 self.jumping["state"] = False
                 self.rect.bottom = TILEFLOOR

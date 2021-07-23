@@ -93,17 +93,14 @@ def runGame():
                 winner = gameMap.transitionTile(direction)
                 beardMan.rect.right = beardman.TILERIGHT
         
-        
         beardMan.move(direction, jump)
         
         if winner:
             showInfoScreen('winner')
             winner = reset(beardMan, gameMap)
-            held = False
         elif beardMan.hp <= 0:
             showInfoScreen('gameover')
             winner = reset(beardMan, gameMap) 
-            held = False
             
         DISPLAYSURF.blit(gameMap.drawCurrentTile(), (0, 0))  
         if gameMap.map[gameMap.currentTile].monster != None:
