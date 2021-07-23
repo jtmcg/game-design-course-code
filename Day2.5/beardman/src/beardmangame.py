@@ -63,7 +63,6 @@ def runGame():
             if event.type == QUIT:
                 terminate()
             elif event.type == KEYDOWN:
-                held = True
                 if event.key == K_RIGHT or event.key == K_d:
                     direction = RIGHT
                     beardMan.flipDirection(direction)
@@ -84,6 +83,8 @@ def runGame():
                 elif event.key == K_UP or event.key == K_w or event.key == K_SPACE:
                     jump = False
           
+        if beardMan.rect.bottom < 300 and (beardMan.rect.left <= 50 or beardMan.rect.right >= WINDOWWIDTH - 50):
+            direction = None
         if direction == RIGHT:
             if beardMan.rect.right > WINDOWWIDTH:
                 winner = gameMap.transitionTile(direction)
