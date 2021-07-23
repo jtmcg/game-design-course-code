@@ -19,11 +19,9 @@ class Map:
         #create a random order of dungeon tiles and fill them with random stuff
         dungeonStart = dungeontile.DungeonTile(None, None, "start", False)
         dungeon2 = dungeontile.DungeonTile(None, None, "center", False)
-        dungeon3 = dungeontile.DungeonTile(None, "plankton", "center", False)
-        dungeon4 = dungeontile.DungeonTile("potion", None, "center", False)
         dungeon5 = dungeontile.DungeonTile(None, None, "end", False)
         
-        self.map = [dungeonStart, dungeon2, dungeon3, dungeon4, dungeon5]
+        self.map = [dungeonStart, dungeon2, dungeon5]
                 
     def transitionTile(self, direction):
         if direction == 'right':

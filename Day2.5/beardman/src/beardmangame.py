@@ -52,10 +52,9 @@ def runGame():
     
     #initialize necessary classes
     gameMap = dungeonmap.Map()
-    beardMan = beardman.BeardMan()
+    beardMan = beardman.BeardMan(speed = STEPSIZE)
     
     winner = False
-    held = False
     direction = None
     jump = False
     
@@ -71,27 +70,31 @@ def runGame():
                 elif event.key == K_LEFT or event.key == K_a:
                     direction = LEFT
                     beardMan.flipDirection(direction)
-                elif event.key == K_UP or K_w or K_SPACE:
+                elif event.key == K_UP or event.key == K_w or event.key == K_SPACE:
                     jump = True
                 elif event.key == K_ESCAPE:
                     terminate()
                 elif event.key == K_k:
                     beardMan.hp = 0
             elif event.type == KEYUP:
-                held = False
+                if event.key == K_RIGHT or event.key == K_d:
+                    direction = None
+                elif event.key == K_LEFT or event.key == K_a:
+                    direction = None
+                elif event.key == K_UP or event.key == K_w or event.key == K_SPACE:
+                    jump = False
           
-        if direction == RIGHT and held:
-            if beardMan.xPosition < 600:
-                beardMan.xPosition += STEPSIZE
-            else:
+        if direction == RIGHT:
+            if beardMan.rect.right > WINDOWWIDTH:
                 winner = gameMap.transitionTile(direction)
-                beardMan.xPosition = beardman.TILELEFT
-        elif direction == LEFT and held:
-            if beardMan.xPosition > 50:
-                beardMan.xPosition -= STEPSIZE
-            else:
+                beardMan.rect.left = beardman.TILELEFT
+        elif direction == LEFT:
+            if beardMan.rect.left < 0:
                 winner = gameMap.transitionTile(direction)
-                beardMan.xPosition = beardman.TILERIGHT
+                beardMan.rect.right = beardman.TILERIGHT
+        
+        
+        beardMan.move(direction, jump)
         
         if winner:
             showInfoScreen('winner')
@@ -107,7 +110,7 @@ def runGame():
             DISPLAYSURF.blit(gameMap.map[gameMap.currentTile].drawMonster(), (400, 300))
         if gameMap.map[gameMap.currentTile].loot != None:
             DISPLAYSURF.blit(gameMap.map[gameMap.currentTile].drawLoot(), (400, 300))
-        DISPLAYSURF.blit(beardMan.drawBeardMan(), (beardMan.xPosition, beardMan.yPosition))
+        DISPLAYSURF.blit(*beardMan.drawBeardMan())
         drawHUD()
 
         pygame.display.update()

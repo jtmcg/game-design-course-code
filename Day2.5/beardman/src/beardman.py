@@ -8,21 +8,46 @@ Created on Wed Jun 19 08:46:28 2019
 import pygame, sys
 from pygame.locals import *
 
-TILELEFT = 53
-TILEFLOOR = 330
+TILELEFT = 50
+TILEFLOOR = 500
 TILERIGHT = 550
+GRAVITY = 1/15
+JUMPVELOCITY = 25
+RIGHT = 'right'
+LEFT = 'left'
 
 class BeardMan:
     
-    def __init__(self):
+    def __init__(self, speed):
         self.hp = 100
         self.imageRight = pygame.image.load('ArtAssets9/beardManRight.png')
         self.imageLeft = pygame.image.load('ArtAssets9/beardManLeft.png')
         self.image = self.imageRight
-        self.xPosition = TILELEFT
-        self.yPosition = TILEFLOOR
+        self.rect = self.image.get_rect()
+        self.rect.bottomleft = (TILELEFT, TILEFLOOR)
         self.gold = 0
         self.inventory = []
+        self.jumping = {"state": False, "duration": 0}
+        self.speed = speed
+
+    def move(self, direction, jump):
+        if direction != None:
+            if direction == RIGHT:
+                self.rect.left += self.speed
+            if direction == LEFT:
+                self.rect.right -= self.speed
+        if jump:
+            self.jumping["state"] = True
+        if self.jumping["state"] == True:
+            self.rect.bottom -= int(JUMPVELOCITY + -1*GRAVITY*self.jumping["duration"]**2)
+            self.jumping["duration"] += 1
+            print(self.rect.bottom)
+            if self.rect.bottom >= TILEFLOOR:
+                self.jumping["state"] = False
+                self.rect.bottom = TILEFLOOR
+                self.jumping["duration"] = 0
+        
+        
         
     def modifyHealth(self, value):
         self.hp += value
@@ -42,7 +67,7 @@ class BeardMan:
             self.inventory.remove(item)
             
     def drawBeardMan(self):
-        return self.image
+        return self.image, self.rect
     
     def flipDirection(self, direction):
         if direction == 'right' and self.image != self.imageRight:
