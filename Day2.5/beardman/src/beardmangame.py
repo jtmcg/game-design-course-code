@@ -52,7 +52,7 @@ def runGame():
     
     #initialize necessary classes
     gameMap = dungeonmap.Map()
-    beardMan = beardman.BeardMan(speed = STEPSIZE)
+    beardMan = beardman.BeardMan(speed = 8)
     
     winner = False
     direction = None
@@ -104,8 +104,12 @@ def runGame():
             winner = reset(beardMan, gameMap) 
             
         DISPLAYSURF.blit(gameMap.drawCurrentTile(), (0, 0))  
-        if gameMap.map[gameMap.currentTile].monster != None:
-            DISPLAYSURF.blit(gameMap.map[gameMap.currentTile].drawMonster(), (400, 300))
+        roomMonster = gameMap.map[gameMap.currentTile].monster
+        if roomMonster != None:
+            DISPLAYSURF.blit(roomMonster.image, roomMonster.rect)
+            roomMonster.move()
+            if roomMonster.rect.colliderect(beardMan.rect):
+                return
         if gameMap.map[gameMap.currentTile].loot != None:
             DISPLAYSURF.blit(gameMap.map[gameMap.currentTile].drawLoot(), (400, 300))
         DISPLAYSURF.blit(*beardMan.drawBeardMan())
